@@ -1,0 +1,45 @@
+@charset "UTF-8";
+
+/*  Observera skillnaden i boxarnas totala storlek. */
+
+/* ----- Grundstil för webbsidan ----- */
+
+html {
+    font-size: 16px;
+}
+
+body {
+    background-color: #f5e6cb;
+    color: #000000;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* ----- Kod för experimentet ----- */
+
+.wrapper {
+    background-color: #FFFFFF;
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+.wrapper div { /* Stil för alla boxar */
+    border: 2px solid #000000;
+    width: 150px;
+    height: 80px;
+    margin: 20px;
+    padding: 20px;
+    display: inline-block;
+}
+
+#box1 { 
+    background-color: #9cb8e3;
+    box-sizing: content-box;
+}
+
+#box2 {
+    background-color: #9ce3b2;
+    box-sizing: border-box;
+}

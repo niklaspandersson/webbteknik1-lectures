@@ -1,0 +1,92 @@
+@charset "UTF-8";
+
+/* ----- Grundstil för webbsidan ----- */
+
+html {
+    font-size: 16px;
+}
+
+html, body, div {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f5e6cb;
+    color: #000000;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* ----- Stil för experiment i exemplet ----- */
+
+.boxWrap { /* Omgivande element */
+    position: relative;
+    display: inline-block;
+    margin-right: 2em;
+}
+
+.boxWrap > div { /* Inre box */
+    position: absolute;
+    background-color: #eeec9a;
+    border: 2px solid #000000;
+    margin: 0;
+    padding: 10px;
+    width: 200px;
+}
+
+/* ----- Visa/dölj box 1 ----- */
+#showbox1 ~ div {
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 0.5s;
+}
+#showbox1:checked ~ div {
+    transform: scaleY(1);
+}
+
+/* ----- Visa/dölj box 2 ----- */
+#showbox2 ~ div {
+    opacity: 0;
+    transition: opacity 1s;
+}
+#showbox2:checked ~ div {
+    opacity: 1;
+}
+
+/* ----- Visa/dölj box 3 ----- */
+#showbox3 ~ div {
+    transform: scale(0) rotate(0deg);
+    /*transform-origin: top left;*/
+    transition: transform 0.5s;
+}
+#showbox3:checked ~ div {
+    transform: scale(1) rotate(360deg);
+}
+
+/* ----- Visa/dölj box 4 ----- */
+.boxWrap4 { /* Omgivande element */
+    position: relative;
+    display: inline-block;
+}
+.boxWrap4 > div { /* Inre element som omger boxen */
+    position: absolute;
+    overflow: hidden; /* Den del av boxen som inte får plats, ska döljas */
+}
+.boxWrap4 > div > div { /* Box 4 */
+    background-color: #eeb99a;
+    border: 2px solid #000000;
+    margin: 0;
+    padding: 10px;
+    width: 200px;
+}
+
+#showbox4 ~ div > div { /* Box 4 */
+    transform: translateY(-200px);
+    transition: transform 0.5s;
+}
+#showbox4:checked ~ div > div {
+    transform: translateY(0px);
+}

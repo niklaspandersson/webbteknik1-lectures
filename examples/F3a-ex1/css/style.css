@@ -1,0 +1,29 @@
+html {
+  font-size: 16px;
+}
+
+body {
+  background-color: #e0f4cd;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+  margin: 0 auto;
+}
+
+h1,
+h2,
+h3 {
+  color: #486757;
+  font-style: italic;
+}
+
+section {
+  background-color: #f6fbed;
+  padding: 12px;
+  border: 2px solid green;
+  margin: 0px;
+}

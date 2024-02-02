@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test av selektorer</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <h1>Test av selektorer</h1>
+
+    <h3>Element inom trigger-elementet</h3>
+    
+    <div id="trigger1">
+        Trigger
+        <div>x</div>
+        <div class="obj1">objekt 1</div>
+        <div>
+            x
+            <div class="obj1">objekt 1</div>
+        </div>
+    </div>
+    <div class="obj1">objekt 1</div>
+
+    <h3>Element som är syskon till trigger-elementet</h3>
+
+    <h4>Operatorn +</h4>
+    <div id="trigger2">Trigger</div>
+    <div>
+        <div class="obj2">objekt 2</div>
+        <div>
+            x
+            <div class="obj2">objekt 2</div>
+        </div>
+    </div>
+    <div class="obj2">objekt 2</div>
+
+    <h4>Operatorn ~</h4>
+    <div id="trigger3">Trigger</div>
+    <div class="obj3">objekt 3</div>
+    <div>
+        x
+        <div class="obj3">objekt 3</div>
+    </div>
+    <div class="obj3">objekt 3</div>
+
+</html>

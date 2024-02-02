@@ -1,0 +1,327 @@
+@charset "UTF-8";
+
+/* ----- Grundstil för webbsidan ----- */
+
+html {
+    font-size: 16px;
+}
+
+html, body {
+    height: 100%;
+}
+
+html, body, nav, header, main, aside, footer, article, section, div, figure {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ----- Layout ----- */
+
+body {
+    background-color: #ffffff;
+    color: #000000;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    display: grid;
+    grid-template-columns: auto 200px minmax(auto,900px) auto;
+    grid-template-rows: 90px min-content auto min-content;
+    grid-template-areas:
+        "header header header header"
+        ".      search search ."
+        ".      nav    main   ."
+        "footer footer footer footer";
+}
+
+header {
+    grid-area: header;
+    background-color: #2A6225;
+    background-image: url(../img/header.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    color: #FFFFFF;
+}
+header h1 {
+    text-indent: -9999px; /* Visa inte h1 på sidan */
+    margin: 0;
+    padding: 0;
+}
+
+#search {
+    grid-area: search;
+    padding: 5px 10px 0px;
+    text-align: right;
+}
+#search input[type=text] {
+    background-color: #C7DEC2;
+}
+#search input[type=button] {
+    background-color: #FFD567;
+}
+
+main {
+    grid-area: main;
+    padding: 10px;
+}
+
+footer {
+    grid-area: footer;
+    border-top: 1px solid #2A6225;
+    background-color: #C7DEC2;
+    color: #000000;
+    padding: 10px;
+    text-align: center;
+}
+footer p {
+    margin: 0;
+}
+
+/* ----- Utformning av navigeringen ----- */
+#menuicon,
+#menucheckbox {
+    display: none;
+}
+
+nav {
+    grid-area: nav;
+    padding: 2em 0.4em 0.4em 0.4em;
+    color: #2A6225;
+    font-style: italic;
+    font-size: 1.2em;
+}
+
+nav ul { /* Både yttre och inre lista */
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+nav ul ul { /* Endast inre lista */
+    margin-left: 1.5em;
+}
+nav li { /* Alla li */
+    border-bottom: 1px solid #C7DEC2;
+    margin-bottom: 0.5em;
+    padding-bottom: 0.5em;
+}
+nav li li { /* Endast inre li */
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: #2A6225;
+}
+
+nav a:hover {
+    color: #000000;
+    font-style: normal;
+}
+nav a.thisPage::before {
+    content: "> ";
+}
+/* ------ Slut på  navigering ----- */
+
+/* ----- Allmän stil för innehåll ----- */
+main a:link,
+main a:visited {
+    color: #000000;
+}
+main a:hover,
+main a:active {
+    background-color: #2A6225;
+    color: #FFFFFF;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    color: #2A6225;
+    font-style: italic;
+}
+
+img {
+    max-width: 100%;
+    border-radius: 25px;
+}
+
+.largeList {
+    font-weight: bold;
+    font-size: 1.1em;
+}
+.alignLeft {
+    float: left;
+    margin-right: 10px;
+}
+.alignRight {
+    float: right;
+    margin-left: 10px;
+}
+.alignCenter {
+    display: block;
+    margin: 10px auto;
+}
+.width100 {
+    width: 100%;
+}
+.imgSameHeight {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 1em;
+}
+.hiliteBox {
+    background-color: #FFD567;
+    display: inline-block;
+    width: 60%;
+    padding: 6px;
+    margin: 40px 0;
+    box-shadow: 6px 6px 10px #999999;
+}
+/* ----- Slut allmän stil för innehåll ----- */
+
+/* ------ Startsidans två kolumner ----- */
+#startpage { /* Två kolumner för innehållet */
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 1.5em;
+}
+
+#offer { /* Veckans erbjudande */
+    background-color: #FFD567;
+    padding: 0.5em;
+    text-align: center;
+    box-shadow: 6px 6px 10px #999999;
+}
+#offer h3 {
+    border-bottom: 1px solid #2A6225;
+    margin: 0.5em 0;
+}
+
+#theme {
+    margin: 2em 0.2em;
+    text-align: right;
+}
+#theme ul {
+    list-style: none;
+}
+#theme li {
+    margin-bottom: 0.5em;
+}
+#theme a {
+    text-decoration: none;
+    font-weight: bold;
+    font-style: italic;
+    padding: 2px;
+}
+/* ------ Slut på  startsidan ----- */
+
+/* ----- Media Queries ----- */
+
+@media screen and (max-width:760px) { /* Ändra till en kolumn */
+    body {
+        grid-template-columns: auto;
+        grid-template-rows: 70px min-content min-content auto min-content;
+        grid-template-areas:
+            "header"
+            "search"
+            "nav"
+            "main"
+            "footer"
+    }
+    nav {
+        padding: 0.4em;
+        font-size: 1em;}
+    nav ul {
+        flex-direction: row;
+        position: relative;
+    }
+    nav ul ul {
+        position: absolute;
+        left: 0;
+    }
+    nav li {
+        border: none;
+        margin-right: 1em;
+    }
+    nav a.thisPage {
+        text-decoration: underline;
+    }
+    nav a.thisPage::before {
+        content: "";
+    }
+    #offer {
+        box-shadow: none;
+    }
+}
+
+@media screen and (max-width:660px) { /* En kolumn på startsidan */
+    #startpage {
+        grid-template-columns: auto;
+        gap: 1.5em;
+    }
+    #theme { /* Dölj temalänkarna */
+        display:none;
+    }
+}
+	
+@media screen and (max-width:580px) { /* Ta bort justering av bilder. */
+    .alignLeft, .alignRight, .alignCenter {
+        float: none;
+        margin: 5px;
+    }
+    .imgSameHeight {
+        display: block;
+    }
+}
+
+@media screen and (max-width:560px) { /* Byt bild för header samt navigering med meny som visas/döljs */
+    body {
+        grid-template-rows: min-content 70px min-content auto min-content;
+        grid-template-areas:
+            "nav"
+            "header"
+            "search"
+            "main"
+            "footer"
+    }
+    header {
+        background-image: url(../img/header-small.jpg);
+    }
+    #menuicon {
+        background-image: url(../img/menuicon.png);
+        width: 24px;
+        height: 24px;
+        display: inline-block;
+        cursor: pointer;
+    }
+    #menucheckbox ~ ul {
+        display: none;
+    }
+    #menucheckbox:checked ~ ul {
+        display: flex;
+    }
+    nav ul {
+        flex-direction: column;
+        position: static;
+    }
+    nav ul ul {
+        position: static;
+        margin: 0;
+    }
+    nav li {
+        margin: 0;
+        padding-bottom: 0.3em;
+    }
+    nav a {
+        display: block;
+        padding: 0.3em;
+    }
+    nav a.thisPage {
+        background-color: #C7DEC2;
+        text-decoration: none;
+    }
+}

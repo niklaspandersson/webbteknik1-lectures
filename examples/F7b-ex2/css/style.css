@@ -1,0 +1,62 @@
+@charset "UTF-8";
+
+/* ----- Grundstil för webbsidan ----- */
+
+html {
+    font-size: 16px;
+}
+
+html, body, div, figure {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f5e6cb;
+    color: #000000;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* ----- Stil för produkterna ----- */
+
+#products {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+/* Stil för produktrutorna */
+#products figure {
+    flex-shrink: 0;     /* Får ej krympa */
+    flex-grow: 0;       /* eller växa */
+    flex-basis: 140px;  /* utan alltid samma bredd */
+    background-color: #FFF;
+    border: 1px solid #999;
+    padding: 4px;
+}
+#products img {
+    width: 100%;
+}
+#products h4,
+#products p {
+    margin: 0;
+}
+#products p {
+    font-size: 80%;
+}
+
+/* Stil för Köp-länken */
+#products a {
+    background-color: #549d54;
+    border: 2px solid #135513;
+    color: #FFF;
+    text-decoration: none;
+    padding: 1px;
+    float: right;
+}
+#products a:hover {
+    background-color: #5e612c;
+}

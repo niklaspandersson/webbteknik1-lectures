@@ -1,0 +1,46 @@
+/* ----- Olika stilval för text ----- */
+
+html {
+    /* Rotelementet */
+    font-size: 16px;
+    /* Storlek på "rot-font", 1rem = 16px */
+}
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h1 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: italic;
+}
+
+#first {
+    color: red;
+}
+
+blockquote {
+    width: 400px;
+    text-align: center;
+    font-size: 0.8rem;
+    line-height: 2rem;
+}
+
+div {
+    font-weight: bold;
+}
+
+.highlight {
+    background-color: yellow;
+}
+
+/* ----- Stil för listor ----- */
+
+ol {
+    list-style: none;
+}
+
+li {
+    display: inline;
+    margin-right: 2rem;
+}

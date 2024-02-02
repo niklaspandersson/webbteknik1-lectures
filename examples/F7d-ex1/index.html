@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prototyp: formulär för beställning</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <h1>Gretas blommor</h1>
+    <h2>Prototyp: formulär för beställning</h2>
+
+    <form id="orderForm" name="orderForm" method="post">
+        
+        <div id="product"> <!-- Specifikation av den produkt som beställs. -->
+            <input type="hidden" name="artnr" value="75348">
+            <!-- Artikelnummer ska komma från det val användaren gör. Sedan hämtas övriga uppgifter från ett produktregister. Detta kan inte lösas med endast HTML/CSS, utan kräver också något program. Det hanteras inte i denna kurs, men här skapas struktur och formulär, för att visa hur det skulle se ut. -->
+            <!-- Artikelnumret läggs i ett input-element, så att det också kommer med i beställningen, då formuläret skickas. Type="hidden" betyder att input-elementet ej visas på sidan, men ändå finns med i formuläret. -->
+            <p>Du har valt:</p>
+            <ul>
+                <li>Buketten abc: 185 kr</li>
+                <li>Leveransavgift: 95 kr</li>
+                <li>Totalt: 280 kr</li>
+            </ul>
+        </div>
+        <p>Vill du ändra din beställning går du tillbaks till sortmentsidorna och väljer en annan vara.</p>
+        <p>Fyll i uppgifterna nedan (fält med * är obligatoriska)</p>
+
+        <fieldset id="deliveryDate">
+            <legend>Leveransdag</legend>
+            <p>Du kan endast beställa max tre månader i förväg. — Vill du ha leverans idag, måste du beställa senast kl. 12.</p>
+            <label>* Datum: <input type="date" name="delivery-date" required></label>
+            <!-- min och max i input-elementet kan sättas av JavaScript, så att det inte går att beställa före dagens datum och max 3 månader framåt. Men det tar vi i en annan kurs ... -->
+        </fieldset>
+
+        <fieldset id="receiver">
+            <legend>Mottagare</legend>
+            <div class="twoColumns"> <!-- Endast elementen inom div ska delas upp i kolumner -->
+                <label for="r_name">* Namn: </label>
+                    <input type="text" name="r_name" id="r_name" required>
+                <label for="r_street">* Gatuadress: </label>
+                    <input type="text" name="r_street" id="r_street" required>
+                <label for="r_zip">* Postnr: </label>
+                    <input type="text" name="r_zip" id="r_zip" required>
+                <label for="r_town">* Ort: </label>
+                    <input type="text" name="r_town" id="r_town" required>
+                <label for="r_telephone">* Telefon: </label>
+                    <input type="text" name="r_telephone" id="r_telephone" required>
+            </div>
+            <label>
+                <input type="checkbox" name="r_door"> Blommorna får lämnas utanför dörren, om mottagaren inte är hemma
+            </label>
+        </fieldset>
+
+        <fieldset id="card">
+            <legend>Kort till mottagaren</legend>
+            <label>* Text på kortet (max 200 tecken):
+                <textarea name="card" maxlength="200" required></textarea>
+            </label>
+        </fieldset>
+
+        <fieldset id="client">
+            <legend>Dina uppgifter</legend>
+            <div class="twoColumns"> <!-- Endast elementen inom div ska delas upp i kolumner -->
+                <label for="c_name">* Namn: </label>
+                    <input type="text" name="c_name" id="c_name" required>
+                <label for="c_email">* Epost: </label>
+                    <input type="text" name="c_email" id="c_email" required>
+                <label for="c_telephone">Telefon: </label>
+                    <input type="text"  name="c_telephone" id="c_telephone">
+            </div>
+            <div id="payment">
+                <h4>Betalningssätt</h4>
+                * Betala med:
+                <label>
+                    <input type="radio" name="pay_method"> Faktura
+                </label> 
+                <label>
+                    <input type="radio" name="pay_method" checked="checked"> Kreditkort
+                </label>
+                <!-- Om faktura väljs, ska fält för fakturaadress visas. -->
+                <!-- Om kreditkort väljs, ska man komma till en betaltjänst. -->
+                <!-- Vi tar dock inte upp något av det här. -->
+            </div>
+            <label>* <input type="checkbox" name="acceptTerms" required> Jag accepterar <a href="kopvillkor.html">köpvillkoren</a></label>
+        </fieldset>
+
+        <input type="submit" value="Skicka beställning" id="submitBtn">
+
+    </form>
+
+</html>

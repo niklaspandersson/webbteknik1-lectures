@@ -1,0 +1,44 @@
+@charset "UTF-8";
+
+/* ----- Grundstil för webbsidan ----- */
+
+html {
+    font-size: 16px;
+}
+
+html, body, div {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f5e6cb;
+    color: #000000;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* ----- Stil för experiment i exemplet ----- */
+
+fieldset {
+    background-color: #FFF;
+    margin-bottom: 1em;
+    padding: 1em;
+}
+
+legend {
+    font-weight: bold;
+}
+
+.twoColumns {
+    display: grid;
+    grid-template-columns: min-content auto;
+    gap: 1em;
+    white-space: nowrap;
+}
+
+#field1 input {
+    max-width: 30ch;
+}

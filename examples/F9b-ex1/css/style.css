@@ -1,0 +1,41 @@
+@charset "UTF-8";
+
+/* ----- Grundstil för webbsidan ----- */
+
+html {
+    font-size: 16px;
+}
+
+body {
+    background-color: #f5e6cb;
+    color: #000000;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* ----- Stil för experiment i exemplet ----- */
+
+div {
+    background-color: #FFF;
+    border: 1px solid #666;
+    padding: 3px 10px;
+    margin: 6px;
+    max-width: 400px;
+}
+
+#trigger1:hover div {
+    /* Ändra div till .obj1 eller div .obj1 */
+    /* Lägg också till > före div */
+    background-color: #7dd757;
+}
+
+#trigger2:hover + div {
+    /* Ändra div till .obj2 eller div .obj2 */
+    background-color: #7dd757;
+}
+
+#trigger3:hover ~ div {
+    /* Ändra div till .obj3 eller div .obj3 */
+    background-color: #7dd757;
+}

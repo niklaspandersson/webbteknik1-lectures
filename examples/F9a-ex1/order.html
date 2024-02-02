@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gretas Blommor - Beställning</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/order.css">
+</head>
+
+<body>
+    <nav>
+        <label for="menucheckbox" id="menuicon"></label>
+        <input type="checkbox" id="menucheckbox">
+        <ul>
+            <li><a href="index.html">Start</a></li>
+            <li><a href="sortiment/buketter.html">Sortiment</a>
+                <ul>
+                    <li><a href="" class="thisPage">Beställning</a></li>
+                </ul>
+            </li>
+            <li><a href="leverans.html">Leverans</a></li>
+            <li><a href="interior.html">Butiken</a> </li>
+        </ul>
+    </nav>
+    <header>
+        <h1>Gretas blommor</h1>
+    </header>
+    <div id="search">
+        <script async src="https://cse.google.com/cse.js?cx=012451486377633368641:tpmo3kh_mk0"></script>
+        <div class="gcse-searchbox-only"></div>
+    </div>
+    <main>
+        <h2>Beställning för leverans</h2>
+        <form id="orderForm" name="orderForm" method="post">
+            <!-- Specifikation av den produkt som beställs. -->
+            <section id="product">
+                <input type="hidden" name="artnr" value="75348">
+                <p>Du har valt:</p>
+                <ul>
+                    <li>Buketten abc: 185 kr</li>
+                    <li>Leveransavgift: 95 kr</li>
+                    <li>Totalt: 280 kr</li>
+                </ul>
+            </section>
+            <p>Vill du ändra din beställning går du tillbaks till sortmentsidorna och väljer en annan vara.</p>
+            <p>Fyll i uppgifterna nedan (fält med * är obligatoriska)</p>
+
+            <fieldset id="deliveryDate">
+                <legend>Leveransdag</legend>
+                <p>Du kan endast beställa max tre månader i förväg. – Vill du ha leverans idag, måste du beställa senast kl. 12.</p>
+                <label>* Datum: <input type="date" name="delivery-date" required></label>
+                <!-- min och max kan sättas av JavaScript, så att det inte går att beställa före dagens datum och max 30 dagar framåt. Men det tar vi i en annan kurs ... -->
+            </fieldset>
+
+            <fieldset id="receiver">
+                <legend>Mottagare</legend>
+                <div class="twoColumns">
+                    <label for="r_name">* Namn: </label>
+                        <input type="text" name="r_name" id="r_name" required>
+                    <label for="r_street">* Gatuadress: </label>
+                        <input type="text" name="r_street" id="r_street" required>
+                    <label for="r_zip">* Postnr: </label>
+                        <input type="text" name="r_zip" id="r_zip" required>
+                    <label for="r_town">* Ort: </label>
+                        <input type="text" name="r_town" id="r_town" required>
+                    <label for="r_telephone">Telefon: </label>
+                        <input type="text" name="r_telephone" id="r_telephone">
+                </div>
+                <label>
+                    <input type="checkbox" name="r_door"> Blommorna får lämnas utanför dörren, om mottagaren inte är hemma
+                </label>
+            </fieldset>
+
+            <fieldset id="card">
+                <legend>Kort till mottagaren</legend>
+                <label>* Text på kortet (max 200 tecken):
+                    <textarea name="card" maxlength="200" required></textarea>
+                </label>
+            </fieldset>
+
+            <fieldset id="client">
+                <legend>Dina uppgifter</legend>
+                <div class="twoColumns">
+                    <label for="c_name">* Namn: </label>
+                        <input type="text" name="c_name" id="c_name" required>
+                    <label for="c_email">* Epost: </label>
+                        <input type="text" name="c_email" id="c_email" required>
+                    <label for="c_telephone">Telefon: </label>
+                        <input type="text" name="c_telephone" id="c_telephone">
+                </div>
+                <section id="payment">
+                    <h4>Betalningssätt</h4>
+                    * Betala med:
+                    <label>
+                        <input type="radio" name="pay_method"> Faktura
+                    </label>
+                    <label>
+                        <input type="radio" name="pay_method" checked="checked"> Kreditkort
+                    </label>
+                    <!-- Om faktura väljs, ska fält för fakturaadress visas. -->
+                    <!-- Om kreditkort väljs, ska man komma till en betaltjänst. -->
+                    <!-- Vi tar dock inte upp något av det här. -->
+                </section>
+                <label>* <input type="checkbox" name="acceptTerms" required> Jag accepterar <a href="kopvillkor.html">köpvillkoren</a></label>
+            </fieldset>
+            <input type="submit" value="Skicka beställning" id="submitBtn">
+        </form>
+    </main>
+    <footer>
+        <p>Gretas Blommor, Gatan 123, 12345 Staden</p>
+        <p>tel. 0123-123456 — gretasblommor@abc.se — <a href="kontakt.html">Kontaktformulär</a></p>
+        <p>Öppet: mån-fre kl. 10-20, lör: kl. 11-17, sön: kl. 11-15</p>
+    </footer>
+</body>
+
+</html>

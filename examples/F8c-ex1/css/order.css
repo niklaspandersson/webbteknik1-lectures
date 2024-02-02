@@ -1,0 +1,81 @@
+@charset "UTF-8";
+
+/* ----- Stil för produkterna ----- */
+
+#product ul {
+    display: inline-block;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+#product li {
+    text-align: right;
+}
+#product li:last-child {
+    border-top: 1px solid #000000;
+    font-weight: bold;
+}
+
+#orderForm fieldset {
+    background-color: #C7DEC2;
+    border: 1px solid #2A6225;
+    padding: 1em;
+    margin-bottom: 2em;
+}
+
+#orderForm legend {
+    background-color: #C7DEC2;
+    border-radius: 25px;
+    padding: 0 10px;
+    border-top: 1px solid #2A6225;
+    color: #2A6225;
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+.twoColumns { /* Uppdelning i två kolumner */
+    display: grid;
+    grid-template-columns: min-content auto;
+    gap: 0.5em;
+    white-space: nowrap; /* Texter före fälten ska inte radbrytas */
+    margin-bottom: 0.5em;
+}
+
+#card textarea {
+    display: block; /* Så att det hamnar på en egen rad */
+    width: 100%;
+    height: 6em;
+}
+
+#payment {
+    margin-bottom: 1em;
+    padding: 0;
+}
+#payment h4 {
+    margin-bottom: 0.3em;
+}
+
+#submitBtn {
+    display: block;
+    margin-left: auto;
+    font-size: 1.2em;;
+}
+
+@media screen and (max-width:520px) {
+    #orderForm legend {
+        font-size: 1.2em;
+    }
+	.twoColumns {
+		grid-template-columns: auto;
+        gap: 0.2em;
+    }
+    #payment label {
+        display: block;
+    }
+}
+
+@media screen and (max-width:340px) {
+	#deliveryDate input {
+        display: block;
+    }
+}

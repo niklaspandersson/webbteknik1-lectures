@@ -1,0 +1,73 @@
+@charset "UTF-8";
+
+/* ----- Grundstil för webbsidan ----- */
+
+html {
+    font-size: 16px;
+}
+
+html, body, div {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f5e6cb;
+    color: #000000;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* ----- Stil för experiment i exemplet ----- */
+
+.boxstyle {
+    background-color: #eadb82;
+    border: 3px solid #000000;
+    margin: 20px;
+    padding: 8px;
+    width: 200px;
+    height: 100px;
+}
+
+/* ----- Box 1 ----- */
+
+#box1 {
+    transition-property: background-color;
+    transition-duration: 2s;
+    transition-timing-function: linear;
+    /* transition: background-color 2s linear; */
+}
+#box1:hover {
+    background-color: #5679bf;
+}
+
+/* ----- Box 2 ----- */
+
+#box2 {
+    transition: all 1s;
+}
+
+#box2:hover {
+    width: 400px;
+    height: 200px;
+}
+
+/* ----- Bilden ----- */
+
+.imgWrapper {
+    position: relative;
+    width: 50px;
+    height: 40px;
+}
+#img1 {
+    position: absolute;
+    width: 50px;
+    transition: all 1s;
+}
+
+#img1:hover {
+    width: 400px;
+    transition: all 1s;
+}

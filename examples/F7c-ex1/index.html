@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test av formulär</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <h1>Test av formulär</h1>
+    <form id="testForm">
+        <!--<form id="testForm" method="post" action="...">-->
+
+        <fieldset class="twoColumns" id="field1">
+            <legend>Några olika input-element</legend>
+            Text: <input type="text">
+            Numeriskt: <input type="number" min="4" max="25">
+            E-post: <input type="email" id="inp3">
+            Datum: <input type="date" min="2022-06-25" max="2022-07-20">
+            Skjutreglage: <input type="range" min="0" max="10">
+            Färgval: <input type="color" value="#D17200">
+        </fieldset>
+
+        <fieldset>
+            <legend>Olika användning av label</legend>
+            <h4>Utan label</h4>
+            <input type="checkbox"> Test 1
+            <h4>Med label</h4>
+            <label>
+                <input type="checkbox"> Test 2
+            </label>
+            <hr>
+            <input type="checkbox" id="test2">
+            <label for="test2">Test 3</label>
+        </fieldset>
+
+        <fieldset>
+            <legend>Kryssrutor och radioknappar</legend>
+            <label><input type="checkbox"> Röd</label>
+            <label><input type="checkbox"> Grön</label>
+            <label><input type="checkbox"> Blå</label>
+            <hr>
+            <label><input type="radio" name="color"> Röd</label>
+            <label><input type="radio" name="color" checked> Grön</label>
+            <label><input type="radio" name="color"> Blå</label>
+        </fieldset>
+
+        <fieldset>
+            <legend>Meny</legend>
+            <label>Välj: 
+                <select>
+                    <option value="red"> Röd</option>
+                    <option value="green" selected> Grön</option>
+                    <option value="blue"> Blå</option>
+                </select>
+            </label>
+        </fieldset>
+
+        <fieldset class="twoColumns">
+            <legend>Texarea</legend>
+            Skriv en text: 
+            <textarea rows="5">En text</textarea>
+        </fieldset>
+
+        <fieldset class="twoColumns">
+            <legend>Attributen name och required</legend>
+            En text: <input type="text" name="texten" required>
+        </fieldset>
+
+        <fieldset>
+            <legend>Knappar</legend>
+            <input type="button" value="Knapp">
+            <input type="reset" value="Ångra">
+            <input type="submit" value="Skicka">
+            <hr>
+            <button type="button">Knapp</button>
+            <button type="reset">Ångra</button>
+            <button type="submit">Skicka</button>
+        </fieldset>
+        
+    </form>
+
+</html>

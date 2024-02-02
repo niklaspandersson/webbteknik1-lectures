@@ -1,0 +1,97 @@
+@charset "UTF-8";
+
+/* ----- Grundstil för webbsidan ----- */
+
+html {
+    font-size: 16px;
+}
+
+html, body {
+    height: 100%;
+}
+
+html, body, nav, header, main, aside, footer, article, section, div {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ----- Layout ----- */
+
+body {
+    background-color: #ffffff;
+    color: #000000;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    display: grid;
+    grid-template-columns: auto 150px minmax(auto,850px) auto;
+    grid-template-rows: min-content min-content auto min-content;
+    grid-template-areas:
+        ".      header header ."
+        ".      search search ."
+        ".      nav    main   ."
+        "footer footer footer footer"
+}
+
+nav {
+    grid-area: nav;
+    background-color: #a0de93;
+}
+
+header {
+    grid-area: header;
+    background-color: #23b023;
+    padding: 10px;
+}
+
+#search {
+    grid-area: search;
+    background-color: #86d0eb;
+    padding: 10px;
+    text-align: right;
+}
+
+main {
+    grid-area: main;
+    background-color: #f5eb75;
+    padding: 10px;
+}
+
+footer {
+    grid-area: footer;
+    background-color: #aeaeae;
+    padding: 10px;
+    text-align: center;
+}
+
+#startpage {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+
+#startpage section {
+    background-color: #e1bade;
+    padding: 10px;
+}
+
+#startpage aside {
+    background-color: #d57b67;
+    padding: 10px;
+}
+
+/* ----- Media Queries ----- */
+
+@media screen and (max-width:450px) {
+    body {
+        grid-template-columns: auto;
+        grid-template-rows: min-content min-content min-content auto min-content;
+        grid-template-areas:
+            "nav"
+            "header"
+            "search"
+            "main"
+            "footer"
+    }
+    #startpage {
+        grid-template-columns: auto;
+    }
+}

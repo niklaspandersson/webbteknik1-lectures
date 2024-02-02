@@ -1,0 +1,64 @@
+@charset "UTF-8";
+
+/* ----- Grundstil för webbsidan ----- */
+
+html {
+    font-size: 16px;
+}
+
+div, figure, figcaption {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #f5e6cb;
+    color: #000000;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* ----- Kod för experimentet ----- */
+
+.wrapper {
+    background-color: #FFFFFF;
+    width: 600px;
+    height: 200px;
+    margin-bottom: 20px;
+    padding: 10px;
+    position: relative;
+}
+
+#box { 
+    background-color: #9cb8e3;
+    border: 2px solid #000000;
+    width: 200px;
+    height: 100px;
+    padding: 20px;
+    position: absolute;
+    top: 50px;
+    left: 80px;
+}
+
+.wrapper figure {
+    display: inline-block;
+    position: relative;
+}
+.wrapper figcaption {
+    visibility: hidden;
+    background-color: #ede9c8;
+    border: 2px solid #000000;
+    box-shadow: 4px 4px 4px #999999;
+    padding: 6px;
+    position: absolute;
+    bottom: 40px;
+    right: 10px;
+}
+.wrapper img {
+    width: 150px;
+    margin: 20px;
+}
+.wrapper figure:hover figcaption {
+    visibility: visible;
+}

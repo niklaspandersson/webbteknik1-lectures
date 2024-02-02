@@ -1,0 +1,50 @@
+@charset "UTF-8";
+
+/* ----- Stil för kontaktformuläret ----- */
+
+#contactForm {
+	display: inline-block;
+	margin: 0;
+	padding: 0.8em;
+	background-color: #C7DEC2;
+	border: 1px solid #2A6225;
+}
+
+#contactForm div {
+	display: grid;
+	grid-template-columns: min-content auto;
+	gap: 0.5em;
+	white-space: nowrap;
+}
+
+#contactForm input[type=text] {
+	width: 50ch;
+}
+#contactForm textarea {
+	width: 46ch;
+	height: 8em;
+}
+
+#contactForm input[type=submit] {
+	display: block;
+	margin-left: auto;
+	margin-top: 2em;
+}
+
+@media screen and (max-width:520px) {
+	#contactForm div {
+		grid-template-columns: auto;
+	}
+	#contactForm input[type=text], #contactForm textarea {
+		width: 96%;
+	}
+}
+
+@media screen and (max-width:340px) {
+	#contactForm div {
+		grid-template-columns: auto;
+	}
+	#contactForm input[type=text], #contactForm textarea {
+		width: 96%;
+	}
+}

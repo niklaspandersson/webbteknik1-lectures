@@ -1,0 +1,32 @@
+@charset "UTF-8";
+
+/* Koden innehåller en del fel, som upptäcks vid validering. */
+
+body {
+    backgroundcolor: #dbf5cb;
+    max-width: 600px;
+    margin: 0 auto;
+    /* Centrering av sidans innehåll */
+}
+
+img {
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
+}
+
+h1,
+h2,
+h3 {
+    color: #486757 
+    font-style: italic;
+}
+
+section {
+    background-color: #f5fbec;
+    padding: 24px;
+
+
+section h2 {
+    margin-top: 0;
+}
