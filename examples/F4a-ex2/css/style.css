@@ -1,0 +1,59 @@
+@charset "UTF-8";
+
+/* Experimentera med värdena i border-radius och box-shadow. */
+
+/* ----- Grundstil för webbsidan ----- */
+
+html {
+    font-size: 16px;
+}
+
+body {
+    color: #000000;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+main {
+    padding: 10px;
+}
+
+section {
+    background-color: #eaeff8;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+/* ----- Kod för experimentet ----- */
+
+.box {
+    /* Stil för alla boxar */
+    border: 2px solid #000000;
+    box-sizing: border-box;
+    width: 230px;
+    height: 140px;
+    padding: 10px;
+    margin: 20px;
+    display: inline-block;
+
+    /* border-radius: 10px; */
+    /* box-shadow: 5px 5px 20px 10px #988965; */
+}
+
+
+#box1 {
+    background-color: #7094c9;
+}
+
+#box2 {
+    background-color: #9cb8e3;
+}
+
+#box3 {
+    background-color: #b9c9e3;
+}
+
+#box4 {
+    background-color: #cdd5e4;
+}
