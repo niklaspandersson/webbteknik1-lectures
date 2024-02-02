@@ -6,14 +6,16 @@ html {
     font-size: 16px;
 }
 
-html, body, div {
+html,
+body,
+div {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
 body {
-    background-color: #f5e6cb;
+    background-color: white;
     color: #000000;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     max-width: 800px;
@@ -22,7 +24,8 @@ body {
 
 /* ----- Grid-layout för boxarna ----- */
 
-.wrapper { /* Stil för elementet som omger boxarna */
+.wrapper {
+    /* Stil för elementet som omger boxarna */
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: auto auto;
@@ -34,37 +37,39 @@ body {
 
 /* ----- Grid-stil för boxarna ----- */
 
-.wrapper div { /* Stil för alla boxar */
-    border: 6px solid #000000;
+.wrapper div {
+    /* Stil för alla boxar */
+    border: 4px solid #174572;
     padding: 10px;
 }
 
 .wrapper div:nth-child(1) {
-    background-color: #d89228;
+    background-color: #4c699f;
     grid-area: box1;
 }
 
 .wrapper div:nth-child(2) {
-    background-color: #4fcd6c;
+    background-color: #7094c9;
     grid-area: box2;
 }
 
 .wrapper div:nth-child(3) {
-    background-color: #2886d8;
+    background-color: #9cb8e3;
     grid-area: box3;
 }
 
 .wrapper div:nth-child(4) {
-    background-color: #da6f57;
+    background-color: #b9c9e4;
     grid-area: box4;
 }
 
 .wrapper div:nth-child(5) {
-    background-color: #ededa0;
+    background-color: #cdd5e4;
     grid-area: box5;
 }
 
-/* Tillägg då man lägger in bilder i boxarna */
+
+/* Sträck ut bilderna så att de alltid fyller ut sin box */
 .wrapper img {
     width: 100%;
     height: 100%;

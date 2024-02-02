@@ -1,6 +1,6 @@
 @charset "UTF-8";
 
-/* Design med metoden "mobile first" */
+/* Design med metoden "desktop first" */
 
 /* ----- Grundstil för webbsidan ----- */
 
@@ -8,11 +8,21 @@ html {
     font-size: 16px;
 }
 
-html, body {
-    height: 100%; /* Trycker ner sidfoten till botten av fönstret eller dokumentet */
+body {
+    /* Trycker ner sidfoten till botten av fönstret eller dokumentet */
+    min-height: 100vh;
 }
 
-html, body, nav, header, main, aside, footer, article, section, div {
+html,
+body,
+nav,
+header,
+main,
+aside,
+footer,
+article,
+section,
+div {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -23,51 +33,50 @@ img {
 }
 
 #img1 {
-    width: 400px;
+    width: 600px;
 }
 
 /* ----- Layout ----- */
 
 body {
-    background-color: #f5e6cb;
+    background-color: #f0f0f0;
     color: #000000;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: min-content min-content auto 70px;
+    grid-template-columns: auto 150px minmax(0, 750px) auto;
+    grid-template-rows: 100px auto 70px;
     grid-template-areas:
-        "nav"
-        "header"
-        "main"
-        "footer";
+        ".      header header ."
+        ".      nav    main   ."
+        "footer footer footer footer";
 }
 
 nav {
     grid-area: nav;
-    background-color: #4fcd6c;
+    background-color: #9cb8e3;
 }
 
 header {
     grid-area: header;
-    background-color: #d89228;
+    background-color: #7094c9;
     padding: 10px;
 }
 
 main {
     grid-area: main;
-    background-color: #ededa0;
+    background-color: white;
     padding: 10px;
 }
 
 aside {
     grid-area: aside;
-    background-color: #da6f57;
+    background-color: #b9c9e3;
     padding: 10px;
 }
 
 footer {
     grid-area: footer;
-    background-color: #2886d8;
+    background-color: #cdd5e4;
     padding: 10px;
 }
 
@@ -76,50 +85,54 @@ footer {
 nav li {
     display: block;
     list-style: none;
+    margin-bottom: 2em;
 }
+
 nav a {
     text-decoration: none;
 }
 
-header {
-    font-size: 80%;
-}
 header h1 {
     margin-top: 0;
- }
+}
 
- /* ----- Media queries ----- */
+/* ----- Media queries ----- */
 
- @media screen and (min-width: 360px) {
-     body {
+@media screen and (max-width: 550px) {
+    body {
+        grid-template-columns: auto;
         grid-template-rows: 100px min-content auto 70px;
         grid-template-areas:
             "header"
             "nav"
             "main"
             "footer";
-     }
-     header {
-        font-size: 100%;
     }
-     nav li {
-        display: inline;
-        margin-right: 2em;
-     }
- }
 
- @media screen and (min-width: 550px) {
+    nav li {
+        display: inline;
+        margin-bottom: 0;
+        margin-right: 2em;
+    }
+}
+
+@media screen and (max-width: 360px) {
     body {
-        grid-template-columns: auto 150px minmax(0,750px) auto;
-        grid-template-rows: 100px auto 70px;
+        grid-template-columns: auto;
+        grid-template-rows: min-content min-content auto 70px;
         grid-template-areas:
-            ".      header header ."
-            ".      nav    main   ."
-            "footer footer footer footer";
-     }
-     nav li {
+            "nav"
+            "header"
+            "main"
+            "footer";
+    }
+
+    header {
+        font-size: 80%;
+    }
+
+    nav li {
         display: block;
         margin-right: 0;
-        margin-bottom: 2em;
-     }
- }
+    }
+}
