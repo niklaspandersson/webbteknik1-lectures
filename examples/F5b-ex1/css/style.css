@@ -7,16 +7,45 @@ html {
 }
 
 body {
-    background-color: #f5e6cb;
+    background-color: #f0f0f0;
     color: #000000;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     max-width: 800px;
     margin: 0 auto;
 }
 
+h1,
+h2 {
+    margin-top: 0;
+}
+
+section {
+    background-color: #eaeff8;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+main {
+    background-color: white;
+    padding: 10px;
+}
+
 /* ----- Kod för experimentet ----- */
 
-.floatImg {
+img {
+    margin: 0px 10px 10px 0;
+}
+
+#img1 {
+    float: right;
+}
+
+#img2 {
     float: left;
-    margin: 20px;
+}
+
+#part3::after {
+    content: "";
+    display: block;
+    clear: both;
 }

@@ -6,31 +6,46 @@ html {
     font-size: 16px;
 }
 
-div, figure, figcaption {
+div,
+figure,
+figcaption {
     margin: 0;
     padding: 0;
 }
 
+h1,
+h2 {
+    margin-top: 0;
+}
+
 body {
-    background-color: #f5e6cb;
+    background-color: #f0f0f0;
     color: #000000;
+    margin: 0;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     max-width: 800px;
     margin: 0 auto;
 }
 
+main {
+    background-color: white;
+    padding: 10px;
+}
+
+section {
+    background-color: #eaeff8;
+}
+
 /* ----- Kod för experimentet ----- */
 
-.wrapper {
-    background-color: #FFFFFF;
-    width: 600px;
+section {
+    margin-top: 20px;
     height: 200px;
-    margin-bottom: 20px;
     padding: 10px;
     position: relative;
 }
 
-#box { 
+#box {
     background-color: #9cb8e3;
     border: 2px solid #000000;
     width: 200px;
@@ -41,24 +56,33 @@ body {
     left: 80px;
 }
 
-.wrapper figure {
-    display: inline-block;
+#images {
+    display: flex;
+    gap: 40px;
+    justify-content: stretch;
+}
+
+figure {
     position: relative;
 }
-.wrapper figcaption {
+
+img {
+    max-width: 100%;
+}
+
+figcaption {
     visibility: hidden;
-    background-color: #ede9c8;
+    background-color: #e1e2e4;
     border: 2px solid #000000;
     box-shadow: 4px 4px 4px #999999;
     padding: 6px;
+    /* margin: 20px; */
     position: absolute;
     bottom: 40px;
     right: 10px;
 }
-.wrapper img {
-    width: 150px;
-    margin: 20px;
-}
-.wrapper figure:hover figcaption {
+
+
+figure:hover figcaption {
     visibility: visible;
 }

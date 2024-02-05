@@ -9,15 +9,16 @@ html {
 }
 
 body {
-    background-color: #f5e6cb;
+    background-color: white;
     color: #000000;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 /* ----- Kod för experimentet ----- */
 
-.wrapper { /* Omgivande element */
-    background-color: #FFFFFF;
+section {
+    /* Omgivande element */
+    background-color: #eaeff8;
     padding: 20px;
     display: flex;
     flex-direction: row;
@@ -27,9 +28,10 @@ body {
     align-items: stretch;
 }
 
-.wrapper div { /* Inre element (boxarna) */
+section div {
+    /* Inre element (boxarna) */
     border: 2px solid #000000;
-    background-color: #fadf9b;
+    background-color: #c1cddf;
     padding: 4px;
     flex-basis: 120px;
     flex-shrink: 0;
@@ -37,7 +39,7 @@ body {
 }
 
 #specialBox {
-    background-color: #9bdcfa;
+    background-color: #9cb8e3;
     flex-basis: 120px;
     flex-shrink: 0;
     flex-grow: 0;
