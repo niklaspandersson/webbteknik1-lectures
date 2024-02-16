@@ -36,12 +36,17 @@ img {
     margin: 0px 10px 10px 0;
 }
 
+
 #img1 {
-    float: right;
+    float: left;
 }
 
 #img2 {
     float: left;
+}
+
+.last {
+    clear: both;
 }
 
 #part3::after {

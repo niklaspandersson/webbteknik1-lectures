@@ -6,9 +6,16 @@ html {
     font-size: 16px;
 }
 
+
+h1,
+h2 {
+    margin-top: 0;
+}
+
 body {
-    background-color: #f5e6cb;
+    background-color: white;
     color: #000000;
+    padding: 0 20px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     max-width: 800px;
     margin: 0 auto;
@@ -16,27 +23,30 @@ body {
 
 /* ----- Kod för experimentet ----- */
 
-.wrapper {
-    /* Omgivande element */
+.box {
     border: 2px solid #000000;
-    background-color: #fadf9b;
+    width: 100px;
+    height: 60px;
     padding: 20px;
-    display: inline-block;
-    margin-left: 100px;
 }
 
-.innerBox {
-    /* Inre element */
-    border: 2px solid #000000;
-    background-color: #74c6ea;
-    padding: 15px;
+#box1 {
+    background-color: #95b0df;
     position: absolute;
-    /*
-    margin-top: 20px;
-    margin-left: -20px;
-    */
-    /*
-    top: 10px;
-    left: 20px;
-    */
+    top: 80px;
+    left: 40px;
+    z-index: 2;
+}
+
+#box2 {
+    background-color: #cdd5e4;
+    position: absolute;
+    top: 130px;
+    left: 70px;
+    z-index: 1;
+}
+
+#box1:hover,
+#box2:hover {
+    z-index: 10;
 }

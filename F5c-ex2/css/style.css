@@ -1,0 +1,64 @@
+@charset "UTF-8";
+
+/* ----- Grundstil för webbsidan ----- */
+
+html {
+    font-size: 16px;
+}
+
+div,
+figure,
+figcaption {
+    margin: 0;
+    padding: 0;
+}
+
+h1,
+h2 {
+    margin-top: 0;
+}
+
+body {
+    background-color: #f0f0f0;
+    color: #000000;
+    padding: 10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+main {
+    background-color: white;
+    padding: 10px;
+}
+
+section {
+    background-color: #eaeff8;
+}
+
+/* ----- Kod för experimentet ----- */
+
+.wrapper {
+    /* Omgivande element */
+    border: 2px solid #000000;
+    background-color: #9cb8e3;
+    padding: 20px;
+    display: inline-block;
+    margin-left: 100px;
+}
+
+.innerBox {
+    /* Inre element */
+    border: 2px solid #000000;
+    background-color: #74c6ea;
+    padding: 15px;
+    position: absolute;
+    /*
+    margin-top: 20px;
+    margin-left: -20px;
+    */
+    /*
+    top: 10px;
+    left: 20px;
+    */
+}

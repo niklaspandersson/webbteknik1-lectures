@@ -39,27 +39,39 @@ section {
 /* ----- Kod för experimentet ----- */
 
 section {
-    margin-top: 20px;
-    height: 200px;
+    margin: 20px 0;
     padding: 10px;
     position: relative;
+
+    display: flex;
+    gap: 20px;
 }
 
-#box {
-    background-color: #9cb8e3;
-    border: 2px solid #000000;
-    width: 200px;
-    height: 100px;
+section>.box {
+    width: 120px;
+    height: 120px;
     padding: 20px;
+}
+
+.box {
+    background-color: #b9c9e3;
+    border: 2px solid #000000;
+}
+
+#specialBox {
+    background-color: #7094c9;
+    /* position: absolute; */
+    top: 40px;
+    left: 40px;
+}
+
+.inner {
+    background-color: #cdd5e4;
     position: absolute;
-    top: 50px;
-    left: 80px;
 }
 
 #images {
-    display: flex;
-    gap: 40px;
-    justify-content: stretch;
+    position: relative;
 }
 
 figure {
