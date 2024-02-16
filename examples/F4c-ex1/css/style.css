@@ -43,7 +43,7 @@ body {
     color: #000000;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     display: grid;
-    grid-template-columns: auto;
+    grid-template-columns: 1fr;
     grid-template-rows: min-content min-content auto 70px;
     grid-template-areas:
         "nav"
@@ -102,7 +102,7 @@ header h1 {
 
 /* ----- Media queries ----- */
 
-@media screen and (min-width: 360px) {
+@media screen and (min-width: 460px) {
     body {
         grid-template-rows: 100px min-content auto 70px;
         grid-template-areas:
@@ -122,9 +122,9 @@ header h1 {
     }
 }
 
-@media screen and (min-width: 550px) {
+@media screen and (min-width: 600px) {
     body {
-        grid-template-columns: auto 150px minmax(0, 750px) auto;
+        grid-template-columns: 1fr 150px minmax(0, 750px) 1fr;
         grid-template-rows: 100px auto 70px;
         grid-template-areas:
             ".      header header ."

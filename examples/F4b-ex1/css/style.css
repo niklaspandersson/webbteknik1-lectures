@@ -34,7 +34,7 @@ body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     display: grid;
     grid-template-columns: 2fr 1fr;
-    grid-template-rows: min-content 100px auto 70px;
+    grid-template-rows: min-content min-content auto 70px;
     grid-template-areas:
         "nav    nav"
         "header header"
