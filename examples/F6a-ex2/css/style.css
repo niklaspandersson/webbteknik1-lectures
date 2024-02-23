@@ -6,14 +6,16 @@ html {
     font-size: 16px;
 }
 
-html, body, div {
+html,
+body,
+div {
     margin: 0;
-    padding: 0;
+    padding: 0 8px;
     box-sizing: border-box;
 }
 
 body {
-    background-color: #f5e6cb;
+    background-color: white;
     color: #000000;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     max-width: 800px;
@@ -22,15 +24,27 @@ body {
 
 /* ----- Stil för experiment i exemplet ----- */
 
-.boxWrap { /* Omgivande element */
-    position: relative;
-    display: inline-block;
-    margin-right: 2em;
+h1 {
+    transform: rotate(-2deg);
 }
 
-.boxWrap > div { /* Inre box */
+.boxes {
+    display: flex;
+    gap: 2em;
+}
+
+.boxes .box {
     position: absolute;
-    background-color: #eeec9a;
+}
+
+.boxWrap {
+    /* Omgivande element */
+    position: relative;
+}
+
+.box {
+    /* Inre box */
+    background-color: #9cb8e3;
     border: 2px solid #000000;
     margin: 0;
     padding: 10px;
@@ -38,55 +52,49 @@ body {
 }
 
 /* ----- Visa/dölj box 1 ----- */
-#showbox1 ~ div {
+#showbox1~.box {
     transform: scaleY(0);
     transform-origin: top;
     transition: transform 0.5s;
 }
-#showbox1:checked ~ div {
+
+#showbox1:checked~.box {
     transform: scaleY(1);
 }
 
 /* ----- Visa/dölj box 2 ----- */
-#showbox2 ~ div {
+#showbox2~.box {
+    /* pointer-events: none; */
     opacity: 0;
     transition: opacity 1s;
 }
-#showbox2:checked ~ div {
+
+#showbox2:checked~.box {
+    /* pointer-events: unset; */
     opacity: 1;
 }
 
+
 /* ----- Visa/dölj box 3 ----- */
-#showbox3 ~ div {
-    transform: scale(0) rotate(0deg);
-    /*transform-origin: top left;*/
-    transition: transform 0.5s;
-}
-#showbox3:checked ~ div {
-    transform: scale(1) rotate(360deg);
-}
 
-/* ----- Visa/dölj box 4 ----- */
-.boxWrap4 { /* Omgivande element */
-    position: relative;
-    display: inline-block;
-}
-.boxWrap4 > div { /* Inre element som omger boxen */
+.wrap3>div {
+    /* Inre element som omger boxen */
     position: absolute;
-    overflow: hidden; /* Den del av boxen som inte får plats, ska döljas */
-}
-.boxWrap4 > div > div { /* Box 4 */
-    background-color: #eeb99a;
-    border: 2px solid #000000;
-    margin: 0;
-    padding: 10px;
-    width: 200px;
+    overflow: hidden;
+    /* Den del av boxen som inte får plats, ska döljas */
 }
 
-#showbox4 ~ div > div { /* Box 4 */
-    transform: translateY(-200px);
+.wrap3 .box {
+    /* Box 3 */
+    background-color: #688bd0;
+}
+
+#showbox3~div>.box {
+    /* Box 3 */
+    transform: translateY(-100%);
     transition: transform 0.5s;
 }
-#showbox4:checked ~ div > div {
+
+#showbox3:checked~div>.box {
     transform: translateY(0px);
 }

@@ -4,39 +4,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Test av transition</title>
+    <title>Test av transform</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-    <h1>Test av transition</h1>
+    <h1>Test av transform</h1>
 
-    <div class="boxWrap">
-        <input type="checkbox" id="showbox1">
-        <label for="showbox1">Visa box 1</label>
-        <div>
-            <p>Box 1</p>
-            <p>Repellat, sed laborum ipsum aliquam necessitatibus est.</p>
+    <div class="boxes">
+        <div class="boxWrap">
+            <input type="checkbox" id="showbox1">
+            <label for="showbox1">Visa box 1</label>
+            <div class="box">
+                <p>Box 1</p>
+                <p>Repellat, sed laborum ipsum aliquam necessitatibus est.</p>
+            </div>
+        </div>
+
+        <div class="boxWrap">
+            <input type="checkbox" id="showbox2">
+            <label for="showbox2">Visa box 2</label>
+            <div class="box">
+                <p>Box 2</p>
+                <p>Tempore porro ab deleniti voluptate dolore exercitationem!</p>
+            </div>
         </div>
     </div>
 
-    <div class="boxWrap">
-        <input type="checkbox" id="showbox2">
-        <label for="showbox2">Visa box 2</label>
-        <div>
-            <p>Box 2</p>
-            <p>Tempore porro ab deleniti voluptate dolore exercitationem!</p>
-        </div>
-    </div>
-
-    <div class="boxWrap">
-        <input type="checkbox" id="showbox3">
-        <label for="showbox3">Visa box 3</label>
-        <div>
-            <p>Box 3</p>
-            <p>Culpa dolorem voluptatem minima consectetur voluptate possimus!</p>
-        </div>
-    </div>
 
     <p>Lorem ipsum dolor sit, amet consectetur adipisicing.</p>
     <p>In iure libero totam. Eum, quos reprehenderit!</p>
@@ -45,12 +39,12 @@
     <p>Veniam quo praesentium voluptatum consequuntur adipisci quam!</p>
     <hr>
 
-    <div class="boxWrap4">
-        <input type="checkbox" id="showbox4">
-        <label for="showbox4">Visa box 4</label>
+    <div class="boxWrap wrap3">
+        <input type="checkbox" id="showbox3">
+        <label for="showbox3">Visa box 3</label>
         <div> <!-- Extra element som boxen ska visas i -->
-            <div>
-                <p>Box 4</p>
+            <div class="box">
+                <p>Box 3</p>
                 <p>Aspernatur nesciunt quibusdam error! Earum, accusamus facere!</p>
             </div>
         </div>
