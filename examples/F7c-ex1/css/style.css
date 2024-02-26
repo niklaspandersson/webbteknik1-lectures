@@ -18,7 +18,7 @@ html {
 body {
     background-color: white;
     padding: 15px;
-    max-width: 800px;
+    max-width: 700px;
     margin: 0 auto;
     flex-direction: column;
 }
@@ -26,7 +26,7 @@ body {
 /* ----- Stil för experiment i exemplet ----- */
 
 fieldset {
-    background-color: #FFF;
+    background-color: #e4edfb;
     margin-bottom: 1em;
     padding: 1em;
 }
