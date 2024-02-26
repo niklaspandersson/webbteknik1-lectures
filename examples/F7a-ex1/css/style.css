@@ -18,13 +18,17 @@ html {
 body {
     background-color: white;
     padding: 8px;
-    max-width: 900px;
+    max-width: 750px;
     margin: 0 auto;
     display: flex;
     min-height: 100vh;
 }
 
 /* ----- Stil för experiment i exemplet ----- */
+
+caption {
+    /* caption-side: top; */
+}
 
 table {
     /* border-collapse: collapse; */
