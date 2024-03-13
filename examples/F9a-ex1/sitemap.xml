@@ -1,20 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-  <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  
-	<url><loc>https://enur.se/gretas-blommor/index.html</loc></url>
-	
-	<url><loc>https://enur.se/gretas-blommor/interior.html</loc></url>
-	<url><loc>https://enur.se/gretas-blommor/kontakt.html</loc></url>
-	<url><loc>https://enur.se/gretas-blommor/kopvillkor.html</loc></url>
-	<url><loc>https://enur.se/gretas-blommor/leverans.html</loc></url>
-	<url><loc>https://enur.se/gretas-blommor/order.html</loc></url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-	<url><loc>https://enur.se/gretas-blommor/sortiment/begravning.html</loc></url>
-	<url><loc>https://enur.se/gretas-blommor/sortiment/brollop.html</loc></url>
-	<url><loc>https://enur.se/gretas-blommor/sortiment/buketter.html</loc></url>
-	<url><loc>https://enur.se/gretas-blommor/sortiment/fodelsedag.html</loc></url>
-	<url><loc>https://enur.se/gretas-blommor/sortiment/kransar.html</loc></url>
-	<url><loc>https://enur.se/gretas-blommor/sortiment/ovrigt.html</loc></url>
-  
-  </urlset>
+	<url>
+		<loc>https://medieteknik.lnu.se/gretas/index.html</loc>
+	</url>
+
+	<url>
+		<loc>https://medieteknik.lnu.se/gretas/interior.html</loc>
+	</url>
+	<url>
+		<loc>https://medieteknik.lnu.se/gretas/kontakt.html</loc>
+	</url>
+	<url>
+		<loc>https://medieteknik.lnu.se/gretas/kopvillkor.html</loc>
+	</url>
+	<url>
+		<loc>https://medieteknik.lnu.se/gretas/leverans.html</loc>
+	</url>
+	<url>
+		<loc>https://medieteknik.lnu.se/gretas/order.html</loc>
+	</url>
+
+	<url>
+		<loc>https://medieteknik.lnu.se/gretas/sortiment/begravning.html</loc>
+	</url>
+	<url>
+		<loc>https://medieteknik.lnu.se/gretas/sortiment/brollop.html</loc>
+	</url>
+	<url>
+		<loc>https://medieteknik.lnu.se/gretas/sortiment/buketter.html</loc>
+	</url>
+	<url>
+		<loc>https://medieteknik.lnu.se/gretas/sortiment/fodelsedag.html</loc>
+	</url>
+	<url>
+		<loc>https://medieteknik.lnu.se/gretas/sortiment/kransar.html</loc>
+	</url>
+	<url>
+		<loc>https://medieteknik.lnu.se/gretas/sortiment/ovrigt.html</loc>
+	</url>
+
+</urlset>
