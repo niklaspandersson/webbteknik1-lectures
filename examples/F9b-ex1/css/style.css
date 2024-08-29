@@ -2,16 +2,28 @@
 
 /* ----- Grundstil för webbsidan ----- */
 
+html,
+body,
+div {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 html {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 16px;
+    background-color: #f6f6f6;
 }
 
 body {
-    background-color: #f5e6cb;
-    color: #000000;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    max-width: 800px;
+    background-color: white;
+    padding: 0 16px;
+    max-width: max-content;
+    display: flex;
+    flex-direction: column;
     margin: 0 auto;
+    min-height: 100vh;
 }
 
 /* ----- Stil för experiment i exemplet ----- */
@@ -24,18 +36,22 @@ div {
     max-width: 400px;
 }
 
-#trigger1:hover div {
+.trigger {
+    background-color: #e0e9f7;
+}
+
+#trigger1:hover>.obj1 {
     /* Ändra div till .obj1 eller div .obj1 */
     /* Lägg också till > före div */
-    background-color: #7dd757;
+    background-color: #aec9f1;
 }
 
-#trigger2:hover + div {
+#trigger2:hover+div {
     /* Ändra div till .obj2 eller div .obj2 */
-    background-color: #7dd757;
+    background-color: #aec9f1;
 }
 
-#trigger3:hover ~ div {
+#trigger3:hover~.obj3 {
     /* Ändra div till .obj3 eller div .obj3 */
-    background-color: #7dd757;
+    background-color: #aec9f1;
 }
